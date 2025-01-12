@@ -7,14 +7,14 @@ import javax.swing.*;
 
 public class SimpleGUI extends JFrame {
 	private static final long serialVersionUID = 1L;
-	private JLabel input=new JLabel("Ввод:");
+	private JLabel input=new JLabel("Input:");
 	private JTextField inputTxt=new JTextField("", 5);
-	private JButton create=new JButton("Создать");
+	private JButton create=new JButton("Create");
 	String str0="CreateObject(\"SAPI.SpVoice\").Speak\"";
 	String str1="\"";
 	
 	public SimpleGUI() {
-		super("Речевик");
+		super("Talker");
 		this.setBounds(0, 0, 400, 100);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
@@ -42,7 +42,7 @@ public class SimpleGUI extends JFrame {
     		} 				
 			
 			try {
-				Runtime.getRuntime().exec("wscript D:/JavaTalker/Talker/sound.vbs");
+				Runtime.getRuntime().exec("wscript ./sound.vbs");
 				
 			} catch (IOException e) {
 				System.out.println (e.getMessage());
